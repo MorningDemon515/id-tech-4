@@ -2541,4 +2541,7 @@
       <Filter>Tools\Script</Filter>
     </CustomBuildStep>
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="sys\win32\DxErr.lib" />
+  </ItemGroup>
 </Project>

@@ -26,11 +26,30 @@ If you have questions concerning this license or the applicable additional terms
 ===========================================================================
 */
 
+#define _CRT_SECURE_NO_WARNINGS
+#define _SCL_SECURE_NO_WARNINGS
+#define _USE_MATH_DEFINES
+
+#include <cmath>
+#include <cstdio>
+#include <cfloat>
+#include <iostream>
+
+#ifdef _WIN32
+#undef min
+#undef max
+#endif
+
 #include "../idlib/precompiled.h"
 #pragma hdrstop
 
-#include "Maya5.0/maya.h"
-//#include "Maya6.0/maya.h"			// must also change include directory in project from "MayaImport\Maya4.5\include" to "MayaImport\Maya6.0\include" (requires MSDev 7.1)
+#ifndef FLT_EPSILON
+#define FLT_EPSILON 1.192092896e-07F
+#endif
+
+//#include "Maya5.0/maya.h"
+#include "Maya6.0/maya.h"			// must also change include directory in project from "MayaImport\Maya4.5\include" to "MayaImport\Maya6.0\include" (requires MSDev 7.1)
+
 #include "exporter.h"
 #include "maya_main.h"
 
